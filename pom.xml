@@ -37,7 +37,7 @@
 								<!-- you can provide additional params. -->
 								<!--                                -H:ReflectionConfigurationFiles=classes/reflect-config.json-->
 								<!--                                -H:DynamicProxyConfigurationFiles=classes/proxy-config.json-->
-								--enable-https
+								--enable-url-protocols=http
 							</buildArgs>
 						</configuration>
 						<executions>
