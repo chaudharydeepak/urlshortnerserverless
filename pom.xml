@@ -179,7 +179,7 @@
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 						</env>
 					</image>
-<!--					<classifier>exec</classifier>-->
+					<classifier>exec</classifier>
 				</configuration>
 			</plugin>
 			<plugin>
