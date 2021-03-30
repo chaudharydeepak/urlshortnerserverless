@@ -34,11 +34,9 @@ public class ShortnerService {
         urlCodeMapping.setCreatedDate((LocalDateTime.now()));
         urlCodeMapping.setUpdatedDate((LocalDateTime.now()));
 
-        //AppUtility ctx = () -> SecurityContextHolder.getContext().getAuthentication().getName();
-
-        //urlCodeMapping.setRequestedBy(ctx.fetchUserFrmCtx());
-        urlCodeMapping.setRequestedBy("fancyUser"); 
-	UrlCodeMappingEntity codeMappingEntityResponse = codeRepository.save(urlCodeMapping);
+        AppUtility ctx = () -> SecurityContextHolder.getContext().getAuthentication().getName();
+        urlCodeMapping.setRequestedBy(ctx.fetchUserFrmCtx());
+	    UrlCodeMappingEntity codeMappingEntityResponse = codeRepository.save(urlCodeMapping);
 
         CodeActiveEntity codeActiveEntity = new CodeActiveEntity();
         codeActiveEntity.setId(codeMappingEntityResponse.getId());
